@@ -1,0 +1,38 @@
+.update__section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 378px;
+    overflow-x: hidden;
+}
+
+form>p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+form>input, form>textarea{
+    width: 100%;
+    padding: .5rem;
+    border: 3px solid #181818;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+form>input::placeholder, form>textarea::placeholder{
+    opacity: .2;
+}
+
+form button{
+    border: 3px solid #181818;
+    box-shadow: 4px 4px 0px #181818;
+    padding: 6px 12px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Karla";
+    src: local("Karla"), url("./assets/fonts/Karla-Regular.ttf")format("truetype");
+}
+
+body{
+    font-family: "Karla";
+}
