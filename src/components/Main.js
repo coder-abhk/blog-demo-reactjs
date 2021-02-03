@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Main.css";
 import DeleteIcon from "@material-ui/icons/Delete";
-import Update from "./Update";
-import { UpdateContext } from "./UpdateContext";
-import { Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Main = ({ blogs, onDeleteHandler }) => {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [blogId, setBlogId] = useState("");
-
+const Main = ({ blogs, onDeleteHandler, setBlogId }) => {
   return (
     <main className="main__section">
       <div>
@@ -20,7 +14,6 @@ const Main = ({ blogs, onDeleteHandler }) => {
                 <h1>{blog.title}</h1>
                 <DeleteIcon
                   onClick={(e) => {
-                    e.preventDefault();
                     onDeleteHandler(blog.id);
                   }}
                 />
@@ -47,17 +40,6 @@ const Main = ({ blogs, onDeleteHandler }) => {
             </div>
           );
         })}
-      </div>
-      <div className="update__panel">
-        <Switch>
-          <Route exact path="/update/:id">
-            <UpdateContext.Provider
-              value={[title, content, setTitle, setContent, blogId]}
-            >
-              <Update />
-            </UpdateContext.Provider>
-          </Route>
-        </Switch>
       </div>
     </main>
   );

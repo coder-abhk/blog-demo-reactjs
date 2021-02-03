@@ -19,14 +19,14 @@
     display: flex;
 }
 
-.right>p>a{
+.right .p{
     text-decoration: none;
     color: #ffffff;
     margin-left: 1rem;
     font-weight: 600;
 }
 
-.right>p>a:hover{
+.right .p:hover{
     text-decoration: underline;
 }
 

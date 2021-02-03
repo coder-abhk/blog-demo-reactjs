@@ -1,28 +1,16 @@
 import React from "react";
 import "./Update.css";
-import axios from "axios";
-import { useContext } from "react";
-import { UpdateContext } from "./UpdateContext";
 import App from "../App";
-import { Switch, Link, Route } from "react-router-dom";
+import { Switch, Link, Route} from "react-router-dom";
 
-const Update = () => {
-  const [title, content, setTitle, setContent, blogId] = useContext(
-    UpdateContext
-  );
-  // blog update handler
-  const updateHandler = async (id) => {
-    await axios
-      .put(`/update/${id}`, {
-        id: id,
-        title: title,
-        content: content,
-      })
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
-    setContent("");
-    setTitle("");
-  };
+const Update = ({
+  blogId,
+  title,
+  setTitle,
+  content,
+  setContent,
+  updateHandler,
+}) => {
   return (
     <div className="update__section">
       <form>
@@ -46,15 +34,17 @@ const Update = () => {
         />
         <br />
         <p>
+          <button
+            type="submit"
+            onClick={(e) => {
+              updateHandler(blogId);
+              e.preventDefault()
+            }}
+          >
+            Update
+          </button>
           <Link to="/">
-            <button
-              type="submit"
-              onClick={(e) => {
-                updateHandler(blogId);
-              }}
-            >
-              Update
-            </button>
+            <button style={{marginLeft: 16}}>Home</button>
           </Link>
         </p>
       </form>

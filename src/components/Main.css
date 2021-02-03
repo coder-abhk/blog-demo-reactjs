@@ -1,11 +1,9 @@
 .main__section{
-    width: 70%;
-    margin: 0 auto;
     padding: 3rem 0;
     color: #181818;
     display: flex;
+    flex: 1 ;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .blog{
