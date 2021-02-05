@@ -48,7 +48,7 @@ function App() {
       axios.put(`/update/${id}`, {
         id: id,
         title: title,
-        content: content,
+        content: content
       });
     } catch (err) {
       console.log(err);

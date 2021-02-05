@@ -9,16 +9,16 @@ const Navbar = () => {
         <p>CODER BLOG</p>
       </div>
       <div className="right">
-        <p>
+        <div>
           <Link to="/register">
           <p className="p">SignUp</p>
           </Link>
-        </p>
-        <p>
+        </div>
+        <div>
           <Link to="/login">
           <p className="p">SignIn</p>
           </Link>
-        </p>
+        </div>
       </div>
     </header>
   );
