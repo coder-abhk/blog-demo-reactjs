@@ -1,8 +1,7 @@
-import React from "react";
 import axios from "axios";
 
 export const api = () => {
   axios.create({
-    baseURL: "http://127.0.0.1:3001",
+    baseURL: "https://node-demo-blog.herokuapp.com/",
   });
 };
