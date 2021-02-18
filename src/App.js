@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
-import axios from "./axios";
+import { api as axios } from "./axios";
 import "./App.css";
 import Update from "./components/Update";
 import { BrowserRouter, Route } from "react-router-dom";
